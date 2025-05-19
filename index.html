@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RICOPEPE - Official Meme Coin</title>
+  <meta name="description" content="$RICOPEPE - The hottest meme coin on Solana. 0% Tax, LP Burned, Ownership Renounced. Pepe's brother is here!" />
+  <meta name="keywords" content="meme coin, pepe, solana, crypto, ricopepe, degen, web3" />
+  <meta name="author" content="RicoPepe Team" />
+  <title>RICOPEPE - The Next Meme Coin King</title>
   <link rel="icon" href="Logo.jpg" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
+    :root {
+      --accent: #ff9900;
+      --dark-bg: #0d0d0d;
+      --box-bg: #1a1a1a;
+      --highlight: #00ff88;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Press Start 2P', cursive;
-      background-color: #0d0d0d;
-      color: white;
+      background-color: var(--dark-bg);
+      color: #fff;
       scroll-behavior: smooth;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background-color: rgb(255, 122, 0);
+      background-color: var(--accent);
       z-index: 1000;
       display: flex;
       justify-content: center;
@@ -44,27 +54,15 @@
       color: #fff;
     }
 
-    .spacer {
-      position: relative;
-      top: -100px;
-      height: 100px;
-      width: 100%;
-      visibility: hidden;
-    }
-
     .full-section {
       min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
       border-bottom: 1px solid #333;
-    }
-
-    header.full-section {
-      min-height: 82vh;
     }
 
     header {
@@ -72,6 +70,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      min-height: 85vh;
       animation: fadeIn 1s ease-in-out;
       position: relative;
     }
@@ -84,66 +83,36 @@
     header p {
       font-size: 0.9rem;
       margin-top: 15px;
-    }
-
-    .section h2 {
-      color: #ff9900;
-      margin-bottom: 25px;
+      max-width: 700px;
     }
 
     .btn {
       display: inline-block;
-      background-color: #ff9f0e;
+      background-color: var(--accent);
       color: #000;
-      box-shadow: 0 0 8px #ff9f0e;
+      box-shadow: 0 0 8px var(--accent);
       padding: 10px 20px;
       margin: 10px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s ease;
+      transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .btn:hover {
-      background-color: #ff9f0e;
       transform: scale(1.05);
     }
 
     .btn.highlight {
-      background-color: #00ff88;
+      background-color: var(--highlight);
       color: #000;
-      box-shadow: 0 0 8px #00ff88;
+      box-shadow: 0 0 8px var(--highlight);
     }
 
-    .tokenomics, .roadmap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 10px 10px;
-      font-size: 0.6rem;
-      color: #888;
-    }
-
-    .buy-steps-vertical {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      padding: 10px;
-    }
-
-    .buy-box {
-      background-color: #1a1a1a;
-      border: 3px solid #ff9900;
+    .buy-box, .community-btn {
+      background-color: var(--box-bg);
+      border: 3px solid var(--accent);
       border-radius: 20px;
       padding: 30px 20px;
       width: 100%;
@@ -155,82 +124,46 @@
       transition: transform 0.2s ease;
     }
 
-    .buy-box:hover {
+    .buy-box:hover, .community-btn:hover {
       transform: scale(1.03);
-    }
-
-    .buy-box strong {
-      color: #ff9900;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    #about {
-      text-align: center;
-    }
-
-    .community-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-     gap: 10px;
-     margin-top: 30px;
-     width: 100%;
-     max-width: 400px;
-    }
-
-    .community-btn {
-     background-color: #1a1a1a;
-     color: #ff9900;
-     border: 2px solid #ff9900;
-     border-radius: 12px;
-     font-size: 0.75rem;
-     text-align: center;
-     padding: 29px 25px;
-     transition: 0.3s ease;
-     text-transform: uppercase;
-     box-shadow: 0 0 12px rgba(255, 153, 0, 0.4);
-    }
-
-    .community-btn:hover {
-     background-color: #ff9900;
-     color: #000;
-     transform: translateY(-3px) scale(1.05);
-     box-shadow: 0 0 16px #ff9900;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (min-width: 768px) {
-      .tokenomics {
-        flex-direction: row;
-        justify-content: space-around;
-      }
+      background-color: var(--accent);
+      color: #000;
+      box-shadow: 0 0 16px var(--accent);
     }
 
     .roadmap-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 30px;
-      column-gap: 70px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
       max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      justify-items: center;
+      margin: auto;
     }
 
-    @media (max-width: 768px) {
-      .roadmap-grid {
-        grid-template-columns: 1fr;
-      }
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 500px;
+      margin-top: 30px;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.7rem;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body>
 
-  <nav>
+<body>
+  <nav role="navigation" aria-label="Main navigation">
     <a href="#top">Home</a>
     <a href="#about">About</a>
     <a href="#tokenomics">Tokenomics</a>
@@ -240,112 +173,78 @@
     <a href="#community">Community</a>
   </nav>
 
-  <div id="top"></div>
-
-  <header id="hero" class="full-section" data-aos="fade-up">
-    <h1 id="animated-text"></h1>
-    <p style="margin-top: 20px;">The hottest PEPE meme coin on the blockchain!</p>
-    <div style="margin-top: 30px;">
-      <a href="#" class="btn highlight">Buy $RICOPEPE</a>
-      <a href="#" class="btn">Chart</a>
-      <a class="btn" onclick="copyContract()">Copy CA</a>
-    </div>
-  </header>
-
-  <section id="about" class="full-section section" data-aos="fade-up" style="text-align: center;">
-    <h2>🚀 About</h2>
-    <p data-aos="fade-up" data-aos-delay="200">
-      You’ve probably heard of <strong>PEPE</strong>. He’s the meme that took the internet by storm. But there’s another name you need to know: <strong>$RICOPEPE</strong>. He’s the brother no one talked about — until now.
-    </p>
-    <p data-aos="fade-up" data-aos-delay="400">
-      While PEPE was going viral, RICOPEPE was watching from the sidelines. No noise, no hype — just patience. Raised on Solana, shaped by the culture, he saw everything and waited for the right moment.
-    </p>
-    <p data-aos="fade-up" data-aos-delay="600">
-      Now he's stepping into the spotlight. <strong>0% tax</strong>, <strong>LP burned</strong>, <strong>ownership renounced</strong> — no tricks, no shady stuff. It’s a token for the people, powered by community, not controlled by a few.
-    </p>
-    <p data-aos="fade-up" data-aos-delay="800">
-      This isn’t just about memes. It’s about movement. It’s about having fun, making history, and shaking things up — together. That’s the RICOPEPE way.
-    </p>
-    <p data-aos="fade-up" data-aos-delay="1000">
-      <strong>PEPE’s brother is back.</strong> And he’s bringing the energy. You in?
-    </p>    
-    </div>
-  </section>
-  
-
-  <section id="tokenomics" class="full-section section" data-aos="fade-up">
-    <h2>📊 Tokenomics</h2>
-    <div class="buy-steps-vertical">
-      <div class="buy-box"><strong>Supply: 1,000,000,000</strong></div>
-      <div class="buy-box"><strong>0% Tax</strong></div>
-      <div class="buy-box"><strong>LP Burned</strong></div>
-      <div class="buy-box"><strong>Ownership Renounced</strong></div>
-    </div>
-  </section>
-
-  <section id="roadmap" class="full-section section" data-aos="fade-up">
-    <h2>🗺️ Roadmap</h2>
-    <div class="roadmap-grid">
-      <div class="buy-box">
-        <strong>Phase 1</strong><br>
-        Socials & Website launched<br>
-        Early community building<br>
-        Lore teaser: Who is RicoPepe?<br>
-        Meme drops and Twitter threads
+  <main>
+    <header id="top" class="full-section" data-aos="fade-up">
+      <h1 id="animated-text"></h1>
+      <p>The hottest PEPE meme coin on the blockchain!</p>
+      <div>
+        <a href="#" class="btn highlight">Buy $RICOPEPE</a>
+        <a href="#" class="btn">Chart</a>
+        <a class="btn" onclick="copyContract()">Copy CA</a>
       </div>
-      <div class="buy-box">
-        <strong>Phase 2</strong><br>
-        Token launch<br>
-        Burn LP<br>
-        Renounce Ownership<br>
-        Update the website
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="full-section section" data-aos="fade-up">
+      <h2>🚀 About</h2>
+      <p><strong>$RICOPEPE</strong> is the brother no one talked about — until now. Born on Solana, ready to shake the chain.</p>
+      <p>0% Tax. LP Burned. Ownership Renounced. Fully community-driven. Pure memes, pure chaos.</p>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="full-section section" data-aos="fade-up">
+      <h2>📊 Tokenomics</h2>
+      <div class="buy-steps-vertical">
+        <div class="buy-box"><strong>Supply:</strong> 1,000,000,000</div>
+        <div class="buy-box"><strong>0% Tax</strong></div>
+        <div class="buy-box"><strong>LP Burned</strong></div>
+        <div class="buy-box"><strong>Ownership Renounced</strong></div>
       </div>
-      <div class="buy-box">
-        <strong>Phase 3</strong><br>
-        CG & CMC applications<br>
-        Collabs with Web3/meme creators<br>
-        Expansion of the RicoLore<br>
-        Twitter campaign intensifies
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="full-section section" data-aos="fade-up">
+      <h2>🗺️ Roadmap</h2>
+      <div class="roadmap-grid">
+        <div class="buy-box"><strong>Phase 1</strong><br>Website, socials, lore teaser</div>
+        <div class="buy-box"><strong>Phase 2</strong><br>Token launch, LP burn, website updates</div>
+        <div class="buy-box"><strong>Phase 3</strong><br>CoinGecko, partnerships, meme campaigns</div>
+        <div class="buy-box"><strong>Phase 4</strong><br>Pepe throne, RicoDAO, NFTs</div>
       </div>
-      <div class="buy-box">
-        <strong>Phase 4</strong><br>
-        Claim the Frog Throne<br>
-        The Pepe Papers Leak<br>
-        RicoPepe's Revenge: The Musical<br>
-        Future ideas: RicoDAO, NFTs, meme-based minigames
+    </section>
+
+    <!-- How to Buy -->
+    <section id="howtobuy" class="full-section section" data-aos="fade-up">
+      <h2>🛒 How to Buy</h2>
+      <div class="buy-steps-vertical">
+        <div class="buy-box"><strong>Step 1:</strong> Install a wallet (Phantom)</div>
+        <div class="buy-box"><strong>Step 2:</strong> Buy SOL</div>
+        <div class="buy-box"><strong>Step 3:</strong> Visit <a href="https://jup.ag/swap/SOL" target="_blank" style="color: #40e09d;">Jupiter</a></div>
+        <div class="buy-box"><strong>Step 4:</strong> Swap SOL for $RICOPEPE</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="howtobuy" class="full-section section" data-aos="fade-up">
-    <h2>🛒 How to Buy</h2>
-    <div class="buy-steps-vertical">
-      <div class="buy-box"><strong>Step 1</strong><br>Install a crypto wallet (e.g. Phantom)</div>
-      <div class="buy-box"><strong>Step 2</strong><br>Buy Solana (SOL) on a centralized exchange</div>
-      <div class="buy-box"><strong>Step 3</strong><br>Go to <a href="https://jup.ag/swap/SOL" target="_blank" style="color: #40e09d;">Jupiter</a></div>
-      <div class="buy-box"><strong>Step 4</strong><br>Swap SOL for $RICOPEPE</div>
-    </div>
-  </section>
+    <!-- FAQ -->
+    <section id="faq" class="full-section section" data-aos="fade-up">
+      <h2>❓ FAQ</h2>
+      <div class="buy-steps-vertical">
+        <div class="buy-box"><strong>Is $RICOPEPE safe?</strong><br>LP burned, renounced ownership, 0% tax.</div>
+        <div class="buy-box"><strong>Is this financial advice?</strong><br>No. Just vibes.</div>
+        <div class="buy-box"><strong>Can I help?</strong><br>Yes! Meme makers and devs are welcome!</div>
+      </div>
+    </section>
 
-  <section id="faq" class="full-section section" data-aos="fade-up">
-    <h2>❓ FAQ</h2>
-    <div class="buy-steps-vertical">
-      <div class="buy-box"><strong>Is $RICOPEPE safe?</strong><br>LP burned, ownership renounced. 0% tax. Fully degen, fully transparent.</div>
-      <div class="buy-box"><strong>Is this financial advice?</strong><br>Absolutely not. Just vibes and memes.</div>
-      <div class="buy-box"><strong>Can I join the team?</strong><br>Meme creators, devs, and community builders welcome. DM us!</div>
-    </div>
-  </section>
+    <!-- Community -->
+    <section id="community" class="full-section section" data-aos="fade-up">
+      <h2>🌐 Join the Community</h2>
+      <div class="community-grid">
+        <a href="https://x.com/RicoPepeSOL" class="btn community-btn" target="_blank">Twitter</a>
+        <a href="https://t.me/ricopepesol" class="btn community-btn" target="_blank">Telegram</a>
+      </div>
+    </section>
+  </main>
 
-  <section id="community" class="full-section section" data-aos="fade-up">
-    <h2>🌐 Join the Community</h2>
-    <div class="community-grid">
-      <a href="https://x.com/RicoPepeSOL" class="btn community-btn" target="_blank">Twitter</a>
-      <a href="https://t.me/ricopepesol" class="btn community-btn" target="_blank">Telegram</a>
-    </div>
-  </section>
-  
-
-  <footer id="footer">
+  <footer>
     © 2025 RICOPEPE. This is not financial advice. Enjoy the memes.
   </footer>
 
@@ -356,33 +255,24 @@
     function copyContract() {
       const address = 'RicoPepe has not launched yet.';
       navigator.clipboard.writeText(address)
-        .then(() => {
-          alert('✅ Contract address copied to clipboard!');
-        })
-        .catch(err => {
-          alert('❌ Failed to copy address. Try manually: RicoPepe has not launched yet.');
-          console.error(err);
-        });
+        .then(() => alert('✅ Contract address copied!'))
+        .catch(() => alert('❌ Copy failed. Try manually.'));
     }
 
-    const text = "$RICOPEPE";
-    const textContainer = document.getElementById("animated-text");
-
-    function animateText(text, container, speed = 100) {
-      container.textContent = "";
+    document.addEventListener("DOMContentLoaded", () => {
+      const text = "$RICOPEPE";
+      const container = document.getElementById("animated-text");
       let i = 0;
+      const speed = 100;
+
       function type() {
         if (i < text.length) {
-          container.textContent += text[i];
-          i++;
+          container.textContent += text[i++];
           setTimeout(type, speed);
         }
       }
-      type();
-    }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      animateText(text, textContainer, 100);
+      type();
     });
   </script>
 </body>
